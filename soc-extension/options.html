@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; max-width: 400px; background: #1e1e1e; color: #d4d4d4; }
+        input { width: 100%; padding: 8px; margin: 10px 0; background: #333; color: white; border: 1px solid #555; }
+        button { padding: 10px 15px; background: #0e639c; color: white; border: none; cursor: pointer; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <h2>API Settings</h2>
+    <label>VirusTotal API Key:</label><input type="password" id="vtKey"><br>
+    <label>AbuseIPDB API Key:</label><input type="password" id="abuseKey"><br>
+    <label>Shodan API Key:</label><input type="password" id="shodanKey"><br>
+    <button id="save">Save Keys</button>
+    <p id="status"></p>
+    <script src="options.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "SOC Threat Intel",
+  "version": "1.3",
+  "description": "Deep triage via VT, AbuseIPDB, and Shodan.",
+  "permissions": [
+    "contextMenus",
+    "storage",
+    "clipboardWrite"
+  ],
+  "host_permissions": [
+    "https://www.virustotal.com/*",
+    "https://api.abuseipdb.com/*",
+    "https://api.shodan.io/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "scripts": ["background.js"]
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "soc-intel@portfolio.local",
+      "strict_min_version": "109.0"
+    }
+  },
+  "options_page": "options.html"
+}
