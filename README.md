@@ -4,7 +4,6 @@ A lightweight, zero-click Manifest V3 browser extension designed to eliminate Ti
 
 This tool acts as a micro-SOAR (Security Orchestration, Automation, and Response) utility living directly in your browser. It auto-detects observables (IPs, Domains, URLs, Hashes), routes them to the appropriate Threat Intelligence APIs, and formats the output for safe pasting into enterprise ticketing systems like Microsoft Sentinel, Jira, or ServiceNow.
 
-![Extension Demo](./demo.png) *(Note: Replace with an actual screenshot of your popup UI)*
 
 ## 🚀 The Operational Problem
 During incident triage, analysts spend 3 to 5 minutes per alert manually copying indicators, opening multiple tabs (VirusTotal, AbuseIPDB, Shodan), parsing the results, and manually "defanging" the indicators (e.g., converting `http://` to `hxxp://`) so they don't accidentally execute in a work ticket. Multiply this by 30 alerts a shift, and hours are lost to pure administrative friction.
