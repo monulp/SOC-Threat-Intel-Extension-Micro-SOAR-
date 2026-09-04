@@ -1,16 +1,16 @@
-# 🛡️ SOC Threat Intel Extension (Micro-SOAR)
+#  SOC Threat Intel Extension (Micro-SOAR)
 
 A lightweight, zero-click Manifest V3 browser extension designed to eliminate Tier 1 and Tier 2 SOC alert triage toil. 
 
 This tool acts as a micro-SOAR (Security Orchestration, Automation, and Response) utility living directly in your browser. It auto-detects observables (IPs, Domains, URLs, Hashes), routes them to the appropriate Threat Intelligence APIs, and formats the output for safe pasting into enterprise ticketing systems like Microsoft Sentinel, Jira, or ServiceNow.
 
 
-## 🚀 The Operational Problem
+##  The Operational Problem
 During incident triage, analysts spend 3 to 5 minutes per alert manually copying indicators, opening multiple tabs (VirusTotal, AbuseIPDB, Shodan), parsing the results, and manually "defanging" the indicators (e.g., converting `http://` to `hxxp://`) so they don't accidentally execute in a work ticket. Multiply this by 30 alerts a shift, and hours are lost to pure administrative friction.
 
 **The Solution:** This extension reduces that 5-minute workflow to exactly **2 seconds** without ever leaving the SIEM dashboard.
 
-## 🛠️ Core Features
+## Core Features
 
 *   **Intelligent Auto-Detection:** Automatically identifies whether the highlighted text is an IPv4 address, Domain, URL, or File Hash (MD5, SHA1, SHA256) and routes it to the correct API endpoints.
 *   **Multi-Source Enrichment:**
@@ -21,12 +21,12 @@ During incident triage, analysts spend 3 to 5 minutes per alert manually copying
 *   **Ticket-Safe Clipboard Export:** A one-click "Copy Report" button that formats the raw JSON telemetry into a clean, readable text block while automatically **defanging** the indicator (e.g., `1[.]1[.]1[.]1` or `hxxps://malware[.]com`).
 *   **One-Click Pivot Links:** Dynamically generates deep-links to the web portals of VT, Shodan, AbuseIPDB, and URLScan if a deeper manual investigation is required.
 
-## 🏗️ Architecture & Tech Stack
+##  Architecture & Tech Stack
 *   **Framework:** Manifest V3 (Compatible with Chrome, Edge, Brave, and Firefox)
 *   **Language:** Vanilla JavaScript (ES6+), HTML5, CSS3 (No external libraries or heavy dependencies)
 *   **Security:** API keys are stored strictly in local browser storage (`chrome.storage.local`) and are never synced or transmitted elsewhere. Adheres to strict Content Security Policies (CSP).
 
-## ⚙️ Installation (Developer Mode)
+##  Installation (Developer Mode)
 
 Because this is a custom internal tool, it is installed as an "Unpacked Extension."
 
@@ -38,7 +38,7 @@ Because this is a custom internal tool, it is installed as an "Unpacked Extensio
 4. Click **Load unpacked** and select the folder containing the extension files.
 5. Click the Extension icon in your toolbar, go to **Options**, and securely paste your API keys for VirusTotal, AbuseIPDB, and Shodan.
 
-## 🕹️ Usage Guide
+##  Usage Guide
 
 There are two ways to use the tool:
 
